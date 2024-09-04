@@ -10,7 +10,7 @@ const Info = () => {
     return (
         <>
             <div className={s.info}>
-                <div className={s.title}>Stay updated</div>
+                <div className={s.title}>Stay updated!</div>
                 <div className={s.subtitle}>
                     Join 60,000+ product manages receiving monthly updates on:
                 </div>
@@ -19,7 +19,7 @@ const Info = () => {
                         return (
                             <div key={index} className={s.advantage}>
                                 <img src="src\assets\images\icon-list.svg" />
-                                {item}
+                                <p className={s.text}>{item}</p>
                             </div>
                         );
                     })}

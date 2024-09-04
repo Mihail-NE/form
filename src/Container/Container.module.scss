@@ -1,0 +1,17 @@
+@import "../index.scss";
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form {
+        display: flex;
+        padding: 1em;
+        height: 500px;
+        width: 750px;
+        background-color: $white;
+        border-radius: 20px;
+    }
+}

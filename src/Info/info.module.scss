@@ -1,0 +1,26 @@
+@import "../index.scss";
+
+.info {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    .title {
+        font-size: 2.5em;
+        font-weight: 700;
+        color: $dark-gray;
+    }
+    .subtitle, .text {
+        font-size: 1em;
+        color: $dark-gray;
+    }
+
+    .advantages {
+        .advantage {
+          margin-top: 0.7em;
+            display: flex;
+            gap: 0.8em;
+
+        }
+    }
+}
