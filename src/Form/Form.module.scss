@@ -1,0 +1,44 @@
+@import "../index.scss";
+
+.form {
+    padding-left: 2em;
+    display: flex;
+    flex-direction: column;
+    max-width: 22em;
+    .email {
+        margin-top: 2em;
+        color: $dark-gray;
+        font-size: 0.8em;
+        font-weight: 500;
+        padding-bottom: 0.8em;
+    }
+    .input {
+        font-family: "Roboto";
+        padding: 1em 1.5em;
+        border: 1px solid $gray;
+        border-radius: 0.5em;
+        outline: none;
+        &:focus {
+            border: 1px solid $dark-gray;
+        }
+    }
+
+    .button {
+        margin-top: 1.5em;
+        padding: 1em 1.5em;
+        border-radius: 0.5em;
+        background-color: $dark-gray;
+        color: $white;
+        background: linear-gradient(120deg, darkmagenta, crimson, orange);
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        transition: background-position 0.5s;
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+
+            background-position: 0 0;
+        }
+    }
+}
