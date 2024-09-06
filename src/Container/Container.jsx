@@ -12,14 +12,26 @@ const Container = () => {
         setSubmittedEmail(email);
     };
 
+    const backToForm = () => {
+        setIsSubmit(false);
+        setSubmittedEmail("");
+    };
+
     return (
         <div className={s.container}>
             {isSubmit ? (
                 <div className={s.success}>
-                    <h2>Success!</h2>
-                    <p>Youve been subscribed to our newsletter.</p>
-                    <p>Confirmation sent to: {submittedEmail}</p>
-                    <button onClick={() => setIsSubmit(false)}>GO back</button>
+                    <img
+                        src="src\assets\images\icon-success.svg"
+                        alt="icon-success"
+                    />
+                    <h2>Thanks for subscribing!</h2>
+                    <p>
+                        A confirmation email has been sent to <span className={s["email-send"]}>{submittedEmail}</span>.
+                        Please open it and click the button inside to confirm
+                        your subscription.
+                    </p>
+                    <button onClick={backToForm}>Dismiss message</button>
                 </div>
             ) : (
                 <div className={s.form}>
@@ -27,7 +39,10 @@ const Container = () => {
                         <Info />
                         <Form onSubmitSuccess={handleSubmitSuccess} />
                     </div>
-                    <img src="src\assets\images\illustration-sign-up-desktop.svg" alt="Illustration" />
+                    <img
+                        src="src\assets\images\illustration-sign-up-desktop.svg"
+                        alt="Illustration"
+                    />
                 </div>
             )}
         </div>

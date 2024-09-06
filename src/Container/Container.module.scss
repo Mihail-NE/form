@@ -9,9 +9,55 @@
     .form {
         display: flex;
         padding: 1em;
-        height: 500px;
-        width: 750px;
+        height: 32em;
+        width: 47em;
         background-color: $white;
-        border-radius: 20px;
+        border-radius: 1.25em;
+    }
+}
+
+@media (min-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.success {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.25em;
+    padding: 3em 4em;
+    background-color: $white;
+    height: 28em;
+    width: 28em;
+    border-radius: 2.5em;
+    h2 {
+        font-size: 2.5em;
+        font-weight: 800;
+        color: $dark-gray;
+        line-height: 1em;
+    }
+    p {
+        font-size: 1em;
+        color: $dark-gray;
+    }
+    .email-send {
+        font-weight: 600;
+    }
+    button {
+        width: 100%;
+        margin-top: 1.5em;
+        border: none;
+        padding: 1em 1.5em;
+        border-radius: 0.5em;
+        background-color: $dark-gray;
+        color: $white;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            background: linear-gradient(120deg, #ff6a3a, #ff527b);
+            box-shadow: 0 2px 15px #ff527b;
+        }
     }
 }
