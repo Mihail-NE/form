@@ -6,8 +6,7 @@ function App() {
     return (
         <>
             <Container>
-                <Info />
-                <Form />
+
             </Container>
         </>
     );

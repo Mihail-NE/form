@@ -1,18 +1,20 @@
 @import "../index.scss";
 
+
 .form {
     padding-left: 2em;
     display: flex;
     flex-direction: column;
     max-width: 22em;
-    .email {
-        margin-top: 2em;
+    .email,
+    .error-message {
         color: $dark-gray;
         font-size: 0.8em;
         font-weight: 500;
-        padding-bottom: 0.8em;
     }
-    .input {
+    .input,
+    .error {
+        position: relative;
         font-family: "Roboto";
         padding: 1em 1.5em;
         border: 1px solid $gray;
@@ -20,25 +22,38 @@
         outline: none;
         &:focus {
             border: 1px solid $dark-gray;
+            background-color: $white;
+            color: black;
         }
     }
+    .error {
+        border: 1px solid $tomato;
+        background-color: #ffeaef;
+        color: $tomato;
+    }
+    .wrap {
+        margin-top: 2em;
+        padding-bottom: 0.6em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
+    .error-message {
+        color: red;
+    }
     .button {
         margin-top: 1.5em;
+        border: none;
         padding: 1em 1.5em;
         border-radius: 0.5em;
         background-color: $dark-gray;
         color: $white;
-        background: linear-gradient(120deg, darkmagenta, crimson, orange);
-        background-size: 200% 100%;
-        background-position: 100% 0;
-        transition: background-position 0.5s;
-        border: 0;
         cursor: pointer;
-
+        transition: all 0.5s ease;
         &:hover {
-
-            background-position: 0 0;
+            background: linear-gradient(120deg, #ff6a3a, #ff527b);
+            box-shadow: 0 2px 15px #ff527b;
         }
     }
 }
