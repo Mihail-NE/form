@@ -1,11 +1,7 @@
 import Container from "./Container/Container";
 
 function App() {
-    return (
-        <>
-            <Container />
-        </>
-    );
+    return <Container />;
 }
 
 export default App;
