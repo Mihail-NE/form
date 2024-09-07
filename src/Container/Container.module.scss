@@ -13,12 +13,31 @@
         width: 47em;
         background-color: $white;
         border-radius: 1.25em;
+        .image {
+            height: 30em;
+            width: 22em;
+            border-radius: 1.5em;
+            background-image: url(/src/assets/images/illustration-sign-up-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     }
 }
 
-@media (min-width: 767px) {
+@media screen and (max-width: 20em) {
     .container {
-        flex-direction: column;
+        .form {
+            height: 100%;
+            width: 20em;
+            flex-direction: column-reverse;
+            padding: 0;
+            border-radius: 0%;
+            .image {
+                width: 100%;
+                border-radius: 0 0 2em 2em;
+                background-image: url(/src/assets/images/illustration-sign-up-mobile.svg)
+            }
+        }
     }
 }
 
@@ -58,6 +77,18 @@
         &:hover {
             background: linear-gradient(120deg, #ff6a3a, #ff527b);
             box-shadow: 0 2px 15px #ff527b;
+        }
+    }
+}
+
+@media screen and (max-width: 20em) {
+    .success {
+        padding: 6em 4em 2em 4em;
+        border-radius: 0%;
+        height: 100%;
+        gap: 2em;
+        button {
+            margin-top: 10em;
         }
     }
 }

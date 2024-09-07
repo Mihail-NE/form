@@ -1,6 +1,5 @@
 @import "../index.scss";
 
-
 .form {
     padding-left: 2em;
     display: flex;
@@ -54,6 +53,33 @@
         &:hover {
             background: linear-gradient(120deg, #ff6a3a, #ff527b);
             box-shadow: 0 2px 15px #ff527b;
+        }
+    }
+}
+
+@media screen and (max-width: 20em) {
+    .form {
+        padding-left: 2em;
+        .email,
+        .error-message {
+            font-size: 0.6em;
+        }
+        .input,
+        .error {
+            width: 90%;
+            padding: 1em 1em;
+        }
+
+        .wrap {
+            margin-top: 0.6em;
+            padding-bottom: 0.6em;
+            width: 90%;
+        }
+        .button {
+            margin-top: 1em;
+            width: 90%;
+            padding: 1em 1em;
+            margin-bottom: 2em;
         }
     }
 }
